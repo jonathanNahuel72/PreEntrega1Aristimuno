@@ -1,0 +1,22 @@
+body {
+    background-color: #7D848C;
+}
+
+.tienda {
+    width: 300px;
+    margin: 25px auto;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+button {
+    padding: 7px;
+    margin-top: 7px;
+}
+
+button.remove-btn {
+    background-color: #C7253E;
+    color: white;
+}
