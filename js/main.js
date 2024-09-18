@@ -38,7 +38,7 @@ function addToCart(index) {
 
 
 function updateCart() {
-    const cartList = document.getElementById('cartCard');
+    const cartCard = document.getElementById('cartCard');
     cartCard.innerHTML = '';
 
     cart.forEach((product, index) => {
@@ -68,21 +68,28 @@ function checkout() {
         return;
     }
 
-    let purchaseStatus = prompt('¿Quieres confirmar la compra? (si/no)');
+    let purchaseStatus;
+    do {
+        purchaseStatus = prompt('¿Quieres confirmar la compra? (si/no)').toLowerCase();
+    } while (purchaseStatus !== 'si' && purchaseStatus !== 'no');
 
-    switch (purchaseStatus.toLowerCase()) {
+    switch (purchaseStatus) {
         case 'si':
             alert(`Compra con éxito. Total: $${total}`);
             break;
         case 'no':
             alert('Compra cancelada.');
             break;
-        default:
-            alert('Respuesta no válida. Compra cancelada.');
-            break;
     }
 
     cart = [];
     total = 0;
     updateCart();
+
+
+    if (confirm("¿Desea seguir comprando?")) {
+        
+    } else {
+        alert("Gracias por su compra!");
+    }
 }
