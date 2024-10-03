@@ -8,13 +8,14 @@
 </head>
 <body>
     <div class="ecommerceCarteras">
-        <h1>Rocio Carteras</h1>
-        <div id="productosDisponibles"></div>
+        <h1 class="titulo">By Rocio Carteras</h1>
+        <div id="productosDisponibles" class="productos-grid"></div>
         <h2>Tu compra ya casi es tuya</h2>
-        <ul id="cartCard"></ul>
+        <ul id="cartCard" class="cart-list"></ul>
         <p>Total: $<span id="total">0</span></p>
-        <button onclick="checkout()">Comprar</button>
+        <button id="btnCompra" class="btn-compra" onclick="checkout()">Comprar</button>
     </div>
+
     <script src="./js/main.js"></script>
 </body>
 </html>
